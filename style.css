@@ -1,12 +1,20 @@
 /*********** 
     Geral 
 ***********/
+
+:root {
+  --cards: #302f3d;
+}
+
 * {
-  background-color: #22212c;
   color: #837e9f;
   font-family: "Merriweather Sans", sans-serif;
   box-sizing: border-box; /*Faz com que a caixa/div/qualquer coisa se encaixe dentro do margem*/
   margin: 0;
+}
+
+body {
+  background-color: #22212c;
 }
 
 .container {
@@ -16,6 +24,7 @@
     "footer footer";
   gap: 10px;
   grid-template-columns: 29% 70%;
+  margin: 0 auto;
 }
 
 /*********** 
@@ -23,7 +32,6 @@
 ***********/
 aside {
   grid-area: aside;
-  /* background-color: blue; */
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -31,7 +39,7 @@ aside {
 }
 
 aside > div {
-  background-color: #302f3d;
+  background-color: var(--cards);
   width: 348px;
   margin-top: 30px;
   border-radius: 10%;
@@ -49,25 +57,22 @@ aside > #name > img {
 }
 
 aside > #name > h1 {
-  background-color: #302f3d;
+  background-color: var(--cards);
   font-size: 23px;
   text-align: center;
   margin-bottom: 5px;
 }
 
 aside > #name > h2 {
-  background-color: #302f3d;
+  background-color: var(--cards);
   font-size: 13px;
   text-align: center;
   margin-top: 0;
   margin-bottom: 30px;
 }
 
-aside > #address > ul,
-aside > #address > ul > li,
-aside > #address > ul > li > i {
+aside > #address > ul {
   list-style: none;
-  background-color: #302f3d;
 }
 
 aside > #address > ul {
@@ -76,8 +81,13 @@ aside > #address > ul {
   padding-left: 20px;
 }
 
-aside > #address > ul > li > i {
+aside > #address > ul > li > i,
+aside > #address > ul > li > a > i {
   margin: 13px;
+}
+
+aside a {
+  text-decoration: none;
 }
 
 aside > #technologies {
@@ -85,11 +95,6 @@ aside > #technologies {
   flex-wrap: wrap;
   gap: 1rem;
   padding: 20px;
-}
-
-aside > #technologies > h1,
-aside > #technologies > div {
-  background-color: #302f3d;
 }
 
 aside > #technologies > h1 {
@@ -109,13 +114,6 @@ aside > #technologies > div {
   padding: 5px;
 }
 
-aside > #experiences > h1,
-aside > #experiences > ul,
-aside > #experiences > ul > li,
-aside > #experiences > ul > div {
-  background-color: #302f3d;
-}
-
 aside > #experiences > h1 {
   font-size: 20px;
   margin: 25px;
@@ -133,13 +131,6 @@ aside > #experiences > ul > div {
 
 aside > #experiences > ul > .ultima {
   margin-bottom: 15px;
-}
-
-aside > #education > h1,
-aside > #education > ul,
-aside > #education > ul > li,
-aside > #education > ul > div {
-  background-color: #302f3d;
 }
 
 aside > #education > h1 {
@@ -172,7 +163,7 @@ main > div,
 main > div > div {
   grid-area: main;
   display: flex;
-  background-color: #302f3d;
+  background-color: var(--cards);
   border-radius: 20px;
   padding: 2px;
   width: 95%;
@@ -209,14 +200,6 @@ main > #myOnix > .myOnix1:nth-child(1) {
   margin-right: 25px;
 }
 
-main > #myOnix > .myOnix1 > h1,
-main > #myOnix > .myOnix1 > h1 > i,
-main > #myOnix > .myOnix1 > p,
-main > #myOnix > .myOnix1 > ul > li,
-main > #myOnix > .myOnix1 > ul > li > i {
-  background-color: #302f3d;
-}
-
 main > #myOnix > .myOnix1 > h1 {
   font-size: 16px;
   margin: 15px 30px;
@@ -233,7 +216,7 @@ main > #myOnix > .myOnix1 > p {
 
 main > #myOnix > .myOnix1 > ul {
   display: flex;
-  background-color: #302f3d;
+  background-color: var(--cards);
   margin: 0 10px;
   padding-left: 0;
 }
@@ -262,15 +245,6 @@ main > #recentPosts {
 
 main > #erro {
   box-shadow: 3px 4px 3px #1b1b24;
-}
-
-main > #erro > img,
-main > #erro > .item > h1,
-main > #erro > .item > h3,
-main > #erro > .item > h2,
-main > #erro > .item > ul,
-main > #erro > .item > ul > li {
-  background-color: #302f3d;
 }
 
 main > #erro > img {
@@ -314,7 +288,6 @@ main > #erro > .item > ul > li {
     Footer 
 ***********/
 footer {
-  /* background-color: red; */
   grid-area: footer;
   height: 50px;
   bottom: 0;
